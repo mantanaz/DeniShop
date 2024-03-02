@@ -1,0 +1,78 @@
+
+.signup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 250px;
+    border-radius: 5px;
+    color: rgb(88, 83, 83);
+    font-size: 25px;
+    font-weight: 800;
+    
+}
+
+#name{
+    background-image: url(/assets/user.svg);
+    background-position: 10px 20px;
+    background-repeat: no-repeat;
+}
+
+#email{
+    background-image: url(/assets/email.svg);
+    background-position: 10px 20px;
+    background-repeat: no-repeat;
+}
+
+#password{
+    background-image: url(/assets/password.svg);
+    background-position: 10px 20px;
+    background-repeat: no-repeat;
+}
+
+#confirmpassword{
+    background-image: url(/assets/con-pass.svg);
+    background-position: 10px 20px;
+    background-repeat: no-repeat;
+}
+
+
+input {
+    width: 350px;
+    height: 50px;
+    /* background: transparent; */
+    /* border: none;
+    outline: none; */
+    border-bottom: 2px solid rgb(125, 123, 123);
+    padding: 4px 4px 4px 40px;
+    margin: 10px 0 10px;
+}
+
+input:valid:not(:placeholder-shown) {
+    border:2px solid green;
+}
+
+input:invalid:not(:placeholder-shown) {
+    border: 2px solid red;
+}
+
+input:invalid:not(:placeholder-shown) + .hint{
+    display: block;
+    color:  rgba(255, 0, 0, 0.389);
+}
+
+.hint {
+    display: none;
+    font-size: 15px;
+    color: rgb(143, 156, 167);
+}
+
+button {
+    width: 350px;
+    height: 40px;
+    border-radius: 40px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-weight: 800;
+}

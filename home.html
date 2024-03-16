@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="reset.css">
 </head>
 
 <body>
-    
 
     <div id="root">
         <header>
@@ -18,43 +18,57 @@
                 <h6>DeniShop</h6>
             </div>
             <form>
-                <input id="input-search" type="text" placeholder="Search for products...">
+                <input id="input-search" type="text" placeholder="Search DeniShop...">
             </form>
-            1
+            <div class="profile-bar">
+                <div class="cart-icon">
+                    <span class="cart-value">0</span>
+                    <img src="assets/cart.svg">
+                </div>
+                <button id="btn-logout">Logout</button>
+            </div>
         </header>
+
         <main>
-            <nav class="nav-left">
+            <nav class="nav-filter">
                 <h3>Categories</h3>
             </nav>
     
             <section class="section-products"></section>
     
-            <nav class="nav-right">
+            <nav class="nav-sorting">
                 Sort by    
-                <div class="actionBars">
-                    <button id="btnFilterByCheepItems">Дешёвые</button>
-                    <button id = "btnFilterByExpensiveItems">Дорогие</button>
-                    <button id = "btnFilterByAlphabet">По алфавиту</button>
+                <div class="sorting-list">
+                    <button id="btnFilterByCheepItems">Cheap</button>
+                    <button id = "btnFilterByExpensiveItems">Expensive</button>
+                    <button id = "btnFilterByAlphabet">Alphabetically</button>
                 </div>
             </nav>
         </main>
+        
         <footer>
             <div class="down-logo">
                 <img class="dlogo" src="https://www.internetmatters.org/wp-content/uploads/2022/07/wattpad-img.png">
                 <h6>DeniShop</h6>
             </div>
-            <div class="ft-link">
+            <!-- <div class="ft-link">
                 <a href="">Home</a>
                 <a href="">About</a>
                 <a href="">Terms & Conditions</a>
                 <a href="">Shipping & Return Policy</a>
                 <a href="">Privacy Policy</a>
                 <a href="">FAQ</a>
+            </div> -->
+            <div class="copyright-text">
+                <p>© 2023-2024 ACME, Inc. All rights reserved.</p>
+                <hr>
+                <p>Designed in Belarus, Grodno</p>
             </div>
+            <p>Created by ▲ Denis Olesiyuk</p>
         </footer>
     </div>
     
-    <script src="script.js"></script>
+    <script src="home.js"></script>
 </body>
 
 </html>

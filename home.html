@@ -1,74 +1,182 @@
-<!DOCTYPE html>
-<html lang="en">
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="reset.css">
-</head>
+html {
+    height: 100%;
+    font-family: Kanit;
+    font-size: 13px;
+}
 
-<body>
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    min-height: 100%;
+}
 
-    <div id="root">
-        <header>
-            <div class="head-logo">
-                <img class="logo" src="https://www.internetmatters.org/wp-content/uploads/2022/07/wattpad-img.png">
-                <h6>DeniShop</h6>
-            </div>
-            <form>
-                <input id="input-search" type="text" placeholder="Search DeniShop...">
-            </form>
-            <div class="profile-bar">
-                <div class="cart-icon">
-                    <span class="cart-value">0</span>
-                    <img src="assets/cart.svg">
-                </div>
-                <button id="btn-logout">Logout</button>
-            </div>
-        </header>
+h6, p, body {
+    margin: 0;
+}
 
-        <main>
-            <nav class="nav-filter">
-                <h3>Categories</h3>
-            </nav>
+button {
+    font-family: Kanit;
+    font-size: 13px;
+    cursor: pointer;
+    outline: 0;
+    color: black;
+    background-color: #ff9900;
+    border-color: #ff9900;
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+}
+button:hover {
+    cursor: pointer;
+    outline: 0;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    color: #ff9f39;
+    border-color: #ff9900;
+}
+
+#btn-logout {
+    border-radius: 8px;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    max-width: 1600px;
+    /* min-height: 100%; */
+}
+
+.section-products {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.products-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 250px;
+    height: 250px;
+    border: 2px solid rgb(186, 183, 183);
+    border-radius: 10px;
+    background-color: rgb(249, 249, 249);
+}
+
+.products-card img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 50%;
+    height: 50%;
+}
+
+#price {
+
+    color: #ff8c11;
+}
+#add-to-cart {
+    border-radius: 10px;
+    background-color: #faaf5f;
+    border: none;
+}
+
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     
-            <section class="section-products"></section>
-    
-            <nav class="nav-sorting">
-                Sort by    
-                <div class="sorting-list">
-                    <button id="btnFilterByCheepItems">Cheap</button>
-                    <button id = "btnFilterByExpensiveItems">Expensive</button>
-                    <button id = "btnFilterByAlphabet">Alphabetically</button>
-                </div>
-            </nav>
-        </main>
+    .head-logo {
+        display: flex;
+        align-items: center;
+        & > .logo {
+        width: 150px;
+        height: 100px;
+        };
+        & > h6 {
+            font-size: 20px;
+        };
         
-        <footer>
-            <div class="down-logo">
-                <img class="dlogo" src="https://www.internetmatters.org/wp-content/uploads/2022/07/wattpad-img.png">
-                <h6>DeniShop</h6>
-            </div>
-            <!-- <div class="ft-link">
-                <a href="">Home</a>
-                <a href="">About</a>
-                <a href="">Terms & Conditions</a>
-                <a href="">Shipping & Return Policy</a>
-                <a href="">Privacy Policy</a>
-                <a href="">FAQ</a>
-            </div> -->
-            <div class="copyright-text">
-                <p>© 2023-2024 ACME, Inc. All rights reserved.</p>
-                <hr>
-                <p>Designed in Belarus, Grodno</p>
-            </div>
-            <p>Created by ▲ Denis Olesiyuk</p>
-        </footer>
-    </div>
-    
-    <script src="home.js"></script>
-</body>
+        }
 
-</html>
+        & > .nav-sorting {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .profile-bar {
+            display: flex;
+            gap: 30px;
+        }
+}
+
+    
+
+
+#input-search {
+    max-width: 500px;
+    width: 100%;
+    padding: 6px 20px;
+    border: 1px solid rgb(88, 83, 83);
+    border-radius: 10px;
+    background-image: url(/assets/search.svg);
+    background-position: 5px 5px;
+    background-repeat: no-repeat;
+}
+
+
+main {
+    display: flex;
+    height: 100%;
+}
+
+.sorting-list{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.sorting-list button {
+    width: 90px;
+    padding: 0;
+    text-align: left;
+    border: none;
+    background: none;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    & > .down-logo {
+        display: flex;
+        align-items: center;
+        & > .dlogo {
+        width: 70px;
+        height: 50px;
+        }
+        & > h6 {
+            font-size: 15px;
+        }
+    }
+    
+    & > .ft-links {
+        display: flex;
+        justify-content: center;
+    }
+
+    & > .copyright-text {
+        display: flex;
+        gap: 15px;
+    }
+}
